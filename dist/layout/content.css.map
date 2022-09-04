@@ -1,0 +1,1 @@
+{"version":3,"sources":["layout/content.scss","layout/content.css"],"names":[],"mappings":"AAAA,gBACI,YAAA,CACA,cCCJ","file":"layout/content.css","sourcesContent":[".section--about {\r\n    height: 600px;\r\n    padding: 60px 0;\r\n}",".section--about {\n  height: 600px;\n  padding: 60px 0;\n}"]}

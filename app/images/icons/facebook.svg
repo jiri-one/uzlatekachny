@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="459px" height="496px" viewBox="0 0 459 496" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 0L291.875 0L291.875 467L0 467L0 0Z" id="path_1" />
+    <rect width="458.99997" height="496" id="artboard_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#artboard_1" clip-rule="evenodd" />
+    </clipPath>
+    <clipPath id="mask_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="Artboard-3-Copy" clip-path="url(#clip_1)">
+    <g id="facebook" transform="translate(83.125 14.9999695)" artboard="cbe0b0ed-1823-4b51-b96a-154a358ccad6">
+      <path d="M0 0L291.875 0L291.875 467L0 467L0 0Z" id="Background" fill="#FFFFFF" fill-opacity="0" fill-rule="evenodd" stroke="none" />
+      <g clip-path="url(#mask_1)">
+        <path d="M254.606 262.688L267.576 178.171L186.481 178.171L186.481 123.326C186.481 100.204 197.809 77.6661 234.129 77.6661L270.997 77.6661L270.997 5.70981C270.997 5.70981 237.541 0 205.553 0C138.768 0 95.1148 40.4794 95.1148 113.758L95.1148 178.171L20.8782 178.171L20.8782 262.688L95.1148 262.688L95.1148 467L186.481 467L186.481 262.688L254.606 262.688Z" id="Shape" fill="#FFFFFF" stroke="none" />
+      </g>
+    </g>
+  </g>
+</svg>

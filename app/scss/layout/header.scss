@@ -1,0 +1,57 @@
+@import "../master";
+
+.site__logo  {
+    width: 100%;
+    padding: 1rem;
+    img{
+        width: 125px;
+        margin: auto;
+        display: block;
+    }
+}
+.site__nav {
+    width: 100%;
+    border-top: 1px solid $yellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    .navSocials {
+        width: 20%;
+        ul {
+            list-style: none;
+            li {
+                display: inline-block;
+                &:not(:first-child) {
+                    margin: 0 10px;
+                }
+            }
+        }
+        .navSocials__icon {
+            width: 20px;
+        }
+    }
+    .navigation {
+        ul {
+            list-style: none;
+            padding: 0;
+            li {
+                display: inline-block;
+                color: $white;
+                margin: 0 10px;
+                transition: 200ms ease-in-out;
+                cursor: pointer;
+                &:hover{
+                    color: $yellow;
+                }
+            }
+        }
+    }
+    .navButton {
+        width: 20%;
+        text-align: end;
+        .button {
+            margin-left: auto;
+        }
+    }
+}
