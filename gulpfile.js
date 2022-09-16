@@ -13,8 +13,10 @@ const browsersync = require('browser-sync').create();
 
 // File paths
 const files = {
-	scssPath: 'app/scss/**/*.scss',
+	scssPath: 'app/scss/style.scss',
 	jsPath: 'app/js/**/*.js',
+	iconPath: 'app/scss/vendor/icons/iconsforweb.scss',
+	scssPathwatch: 'app/scss/**/*scss'
 };
 
 // Sass task: compiles the style.scss file into style.css
@@ -73,7 +75,7 @@ function browserSyncReload(cb) {
 // If any change, run scss and js tasks simultaneously
 function watchTask() {
 	watch(
-		[files.scssPath, files.jsPath],
+		[files.scssPathwatch, files.jsPath],
 		{ interval: 1000, usePolling: true }, //Makes docker work
 		series(parallel(scssTask, jsTask), cacheBustTask)
 	);
@@ -85,7 +87,7 @@ function watchTask() {
 function bsWatchTask() {
 	watch('index.html', browserSyncReload);
 	watch(
-		[files.scssPath, files.jsPath],
+		[files.scssPathwatch, files.jsPath],
 		{ interval: 1000, usePolling: true }, //Makes docker work
 		series(parallel(scssTask, jsTask), cacheBustTask, browserSyncReload)
 	);
@@ -104,3 +106,13 @@ exports.bs = series(
 	browserSyncServe,
 	bsWatchTask
 );
+
+
+function iconTask() {
+	return src(files.iconPath, { sourcemaps: false }) // set source and turn on sourcemaps
+		.pipe(sass()) // compile SCSS to CSS
+		.pipe(postcss([autoprefixer(), cssnano()])) // PostCSS plugins
+		.pipe(dest('dist', { sourcemaps: '.' })); // put final CSS in dist folder with sourcemap
+}
+
+exports.iconTask = iconTask;

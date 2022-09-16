@@ -1,0 +1,23 @@
+.row {
+    display: flex;
+}
+
+.row--2c {
+    gap: 30px;
+
+    .col {
+        width: calc(50% - 15px);
+    }
+}
+
+.row-3c {
+    gap: 20px;
+    flex-wrap: wrap;
+    .col {
+        width: calc(33% - 10px);
+    }
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}

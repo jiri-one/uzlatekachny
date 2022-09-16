@@ -3,7 +3,10 @@
 @import "global";
 @import "typography";
 
-
 @import "layout/header";
 @import "layout/hero";
 @import "layout/content";
+@import "layout/helpers";
+
+
+@import "components/about";
