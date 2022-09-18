@@ -1,8 +1,8 @@
 .menuNav {
-    min-height: 1000px;
     background: url(../app/images/content/backgrounds/menunav.jpg);
     position: relative;
     box-shadow: inset 0 99999px rgba(0, 0, 0, 0.7);
+    margin-top: -300px;
     .inner {
         max-width: 1140px;
         margin: auto;
@@ -17,6 +17,7 @@
             color: $white;
             text-align: center;
             font-size: 60px;
+            margin-top: 150px;
         }
     }
     .manuNav__boxes {
@@ -103,5 +104,16 @@
                 }
             }
         }
+    }
+    &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: url(../../app/images/content/backgrounds/menuna_papertop.png);
+            background-repeat: 0;
+            background-position: bottom;
     }
 }
