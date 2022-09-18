@@ -85,7 +85,7 @@ function watchTask() {
 // Watch HTML file for change and reload browsersync server
 // watch SCSS and JS files for changes, run scss and js tasks simultaneously and update browsersync
 function bsWatchTask() {
-	watch('index.html', browserSyncReload);
+	watch('home.html', browserSyncReload);
 	watch(
 		[files.scssPathwatch, files.jsPath],
 		{ interval: 1000, usePolling: true }, //Makes docker work
