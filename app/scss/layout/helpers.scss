@@ -4,9 +4,14 @@
 
 .row--2c {
     gap: 30px;
-
+    flex-wrap: wrap;
     .col {
         width: calc(50% - 15px);
+    }
+    @media screen and (max-width: 480px) {
+        .col {
+            width: 100%;
+        }
     }
 }
 
@@ -20,4 +25,7 @@
 
 .mt-5 {
     margin-top: 5rem;
+    @media screen and (max-width: 480px) {
+    margin-top: 0;
+    }
 }

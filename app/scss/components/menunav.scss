@@ -34,9 +34,9 @@
         justify-content: space-between;
         color: $white;
         gap: 20px;
-
+        flex-wrap: wrap;
         .menuNav__item {
-            width: calc(25% - 10px);
+            width: calc(25% - 20px);
             height: 500px;
             border: 5px solid $yellow;
             display: flex;
@@ -47,6 +47,10 @@
             box-shadow: inset 0 99999px rgba(0, 0, 0, 0.7);
             position: relative;
             cursor: pointer;
+            @media screen and (max-width: 480px) {
+                width: calc(100% - 40px);
+                margin: 20px;
+            }
             a {
                 text-decoration: none;
                 color: inherit;
@@ -62,6 +66,9 @@
                 background-position: center;
                 background-size: cover;
                 margin-top: -30px;
+                @media screen and (max-width: 480px) {
+                    margin-top: 20px;
+                }
             }
 
             &--dezerts {
@@ -75,6 +82,9 @@
                 background-position: center;
                 background-size: cover;
                 margin-top: -30px;
+                @media screen and (max-width: 480px) {
+                    margin-top: 20px;
+                }
             }
 
             h3 {
@@ -113,6 +123,9 @@
                 }
                 &--right:after {
                     transform: translate(-50%) rotate(135deg);
+                    @media screen and (max-width: 480px) {
+                        transform: translate(-50%) rotate(225deg); 
+                    }
                 }
             }
 
@@ -122,6 +135,10 @@
                     &--right{
                         left: 60%;
                         bottom: 100px;
+                        @media screen and (max-width: 480px) {
+                            left: auto;
+                            bottom: 65px;
+                        }
                     }
                 }
 
