@@ -1,52 +1,82 @@
+.menuShowcase {}
+
 .menuShowcase {
-    min-height: 1000px;
-    position: relative;
-    max-width: 1140px;
+    width: 100%;
     margin: auto;
+    position: relative;
+
     h2 {
         text-align: center;
         font-size: 60px;
         margin-top: 100px;
     }
-    .column {
-        position: absolute;
-        width: 360px;
-        border: 2px solid $yellow;
-        padding: 20px;  
-        background: url(../app/images/content/backgrounds/menulistback.jpg);
-        box-shadow: inset 0 99999px rgba(255, 255, 255, 0.8);
-        &--first {
-            top: 100px;
-            left: 0;
-        }
-        &--second {
-            top: 150px;
-            right: 0;
-        }
-        ul {
-            list-style: none;
-            margin: 0;
-            padding:0;
-        }
-        .menu__item {
-            .item__head {
-                display: flex;
-                justify-content: space-between;
-                .item__title,
-                .item__price {
+
+    .row {
+        max-width: 1140px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+
+        .col {
+            max-width: 350px;
+            z-index: 100;
+
+            .category__box {
+                margin-bottom: 50px;
+                max-width: 350px;
+                border: 2px solid $yellow;
+                padding: 20px;
+                background: url(../app/images/content/backgrounds/menulistback.jpg);
+                box-shadow: inset 0 99999px rgba(255, 255, 255, 0.8);
+
+                ul {
+                    list-style: none;
                     margin: 0;
-                    font-size: 20px;
+                    padding: 0;
+                }
+
+                .menu__item {
+                    .item__head {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .item__title,
+                        .item__price {
+                            margin: 0;
+                            font-size: 20px;
+                        }
+                    }
+
+                    .item__ingredients {
+                        margin: 0;
+                    }
+
+                    .item__price {
+                        width: 100px;
+                        text-align: end;
+                    }
+
+                    &:not(:last-child) {
+                        border-bottom: 2px solid $yellow;
+                    }
+
+                    &:not(:first-child) {
+                        padding: 20px 0;
+                    }
+
+                    &:first-child {
+                        padding: 0 0 20px;
+                    }
                 }
             }
-            .item__ingredients {
-                margin: 0;
-            }
-            &:not(:first-child) {
-                margin-top: 20px;
-            }
         }
+
     }
-    &::after{
+}
+
+.menuShowcase--main {
+    &::after {
         content: "";
         position: absolute;
         top: 200px;
@@ -59,5 +89,68 @@
         background-size: contain;
         background-position: bottom;
         z-index: -1;
+    }
+}
+
+.menuShowcase--starters {
+    background: url(../app/images/content/backgrounds/starters.jpg);
+    padding: 50px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .row {
+        justify-content: start;
+        gap: 50px;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 300px;
+            right: -300px;
+            transform: translate(-50%);
+            width: 600px;
+            height: 600px;
+            background: url(../app/images/content/backgrounds/tiramissu.png);
+            background-repeat: 0;
+            background-size: contain;
+            background-position: bottom;
+            z-index: 1;
+            background-repeat: no-repeat;
+        }
+    }
+
+    h2 {
+        color: $white;
+    }
+
+    H3 {
+        color: $yellow;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background: url(../../app/images/content/backgrounds/menuna_papertop.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background: url(../../app/images/content/backgrounds/menunav_paperbottom.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
     }
 }

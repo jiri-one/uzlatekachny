@@ -1,0 +1,57 @@
+footer {
+    background: url(../app/images/content/backgrounds/starters.jpg);
+    padding: 100px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    .footer__logo {
+        margin: auto;
+        display: block;
+        width: 250px;
+    }
+    .row {
+        display: flex;
+        max-width: 1140px;
+        margin: auto;
+        .col {
+            width: 50%;
+            text-align: center;
+            h3 {
+                color: $white;
+                position: relative;
+                margin-bottom: 30px;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: -20px;
+                    left: 50%;
+                    transform: translate(-50%);
+                    width: 100px;
+                    height: 1px;
+                    background-color: $yellow;
+                }
+            }
+            ul {
+                list-style: none;
+                text-align: center;
+                color: $white;
+                margin: 0;
+                padding: 0;
+                li {
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background: url(../../app/images/content/backgrounds/menuna_papertop.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+}

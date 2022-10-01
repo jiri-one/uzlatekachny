@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <script src="dist/all.js"></script>
 </head>
 
 <body>
@@ -36,45 +37,49 @@
             </div>
             <div class="navigation">
                 <ul>
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
+                    <li><a href="#about">O nás</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
                 </ul>
             </div>
             <div class="navButton">
-                <a class="button button--yellow" href="#">Nabídka</a>
+                <a class="button button--yellow" href="#menu">Nabídka</a>
             </div>
         </div>
     </section>
     <section class="hero">
         <div class="hero__inner">
-            <small>Podnadpis</small>
-            <H1>Nejlepší kachna v KV</H1>
-            <a class="button button--yellow" href="#">Prohlédnout si menu</a>
+            <small>Skvělá mezinárodní kuchyně, ale i česká kachna!</small>
+            <H1>U zlaté kachny</H1>
+            <a class="button button--yellow" href="#menu">Prohlédnout si menu</a>
         </div>
     </section>
     <section class="section--about">
-        <div class="main">
+        <div id="about" class="main">
             <div class="row row--2c">
                 <div class="col">
                     <h2>O zlaté kachně</h2>
                     <img class="image" src="./app/images/content/about/interier1.jpg" alt="">
+                    <p>Zakládáme si na chuťovém i vizuálním požitku, přátelském prostředí a personálu. V případě
+                        jakéhokoliv speciálního požadavku nás neváhejte kontaktovat.</p>
                 </div>
                 <div class="col">
-                    <p>
-                        Vše, co u zlaté kachny tvoříme, tvoříme z jedné energie, která je neustále přítomná a dostupná
-                        pro každého a v každé živé bytosti. Podle zvolených kombinací vzniká celek, který je aktuálně
-                        přínosný pro udržení/navrácení se do rovnováhy.
+                    <p class="mt-5"><br>
+                        Snažíme se být více, než jen obyčejná restaurace. Snažíme se vytvořit neutrální útulné prostředí
+                        pro všechny a pro všechny příležitosti - rande, rodinná večeře, nebo i sraz s kamarády na jídlo
+                        a pivko.
                         <br><br>
-                        Veškerá jídla a nápoje pro Vás připravujeme z kvalitních surovin, které pečlivě vybíráme a
-                        snažíme se nakupovat vždy čerstvé a pokud je to možné i v BIO kvalitě vyprodukované.
-                    </p>
-                    <a class="button button--yellowBlack" href="">Více o nás</a>
-                    <img class="image mt-5" src="./app/images/content/about/interier2.jpg" alt="">
+                        Ke každému hostovi máme individuální přístup, když k nám přijde pár na rande, budeme se snažit,
+                        abychom jim dopřáli co nejvíce soukromí. Při jakémkoliv problému, nebo jen potřebě se vypovídat,
+                        neváhejte a oslovte naší obsluhu, ta se vám bude v rámci časových možností věnovat a promluví si
+                        s vámi.
+                    </p><br>
+                    <img class="image" src="./app/images/content/about/interier2.jpg" alt="">
                 </div>
             </div>
         </div>
-        <div class="aboutBox">
+
+        <!-- <div class="aboutBox">
             <div class="overlay">
                 <div class="row row-3c">
                     <div class="col aboutBox__item">
@@ -133,164 +138,434 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <section class="menuNav">
-            <div class="inner">
-                <span class="subtitle">Menu</span>
-                <h2>Nabízíme jen to nejlepší</h2>
+        <div class="inner">
+            <span id="menu" class="subtitle">Menu</span>
+            <h2>Nabízíme jen to nejlepší</h2>
+        </div>
+        <div class="manuNav__boxes">
+            <div class="menuNav__item menuNav__item--salat">
+                <h3>Vyberte si kategorii</h3>
+                <a class="arrowLink arrowLink--right"></a>
             </div>
-            <div class="manuNav__boxes">
-                <div class="menuNav__item menuNav__item--salat">
-                    <h3>Saláty</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    <a class="arrowLink">Prohlédnout</a>
-                </div>
-                <div class="menuNav__item menuNav__item--main">
+            <div class="menuNav__item menuNav__item--main">
+                <a href="#main-dishes">
                     <h3>Hlavní jídla</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    <a class="arrowLink">Prohlédnout</a>
-                </div>
-                <div class="menuNav__item menuNav__item--dezerts">
-                    <h3>Dezerty</h3>
+                    <span class="arrowLink">Prohlédnout</span>
+                </a>
+
+            </div>
+            <div class="menuNav__item menuNav__item--dezerts">
+                <a href="#deserts">
+                    <h3>Předkrmy<br> & <br>Dezerty</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    <a class="arrowLink">Prohlédnout</a>
-                </div>
-                <div class="menuNav__item menuNav__item--drinks">
+                    <span class="arrowLink">Prohlédnout</span>
+                </a>
+            </div>
+            <div class="menuNav__item menuNav__item--drinks">
+                <a href="#drinks">
                     <h3>Nápoje</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    <a class="arrowLink">Prohlédnout</a>
+                    <span class="arrowLink">Prohlédnout</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="main-dishes" class="menuShowcase menuShowcase--main">
+        <h2>Hlavní jídla</h2>
+        <div class="row">
+            <div class="col">
+                <div class="category__box">
+                    <h3>Hovězí</h3>
+                    <ul>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">RUMP steak</h4>
+                                <p class="item__price">399 kč</p>
+                            </div>
+                            <p class="item__ingredients">
+                                pečené brambory, tatarská a béarnská omáčka
+                            </p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">hovězí guláš</h4>
+                                <p class="item__price">240 kč</p>
+                            </div>
+                            <p class="item__ingredients">Popis</p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">hovězí maso na thajský způsob</h4>
+                                <p class="item__price">435 Kč</p>
+                            </div>
+                            <p class="item__ingredients">zelenina mix, fazolky, mrkev, brokolice</p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">hovězí masové kuličky v rajčatové omáčce</h4>
+                                <p class="item__price">375 kč</p>
+                            </div>
+                            <p class="item__ingredients">těstoviny penne, parmesan</p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">hovězí biryani-beef biryani</h4>
+                                <p class="item__price">325 Kč</p>
+                            </div>
+                            <p class="item__ingredients">rýže basmati, kořeněné kari, salát a raičata</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category__box">
+                    <h3>Kuřecí</h3>
+                    <ul>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">grilovaný kuřecí špíz</h4>
+                                <p class="item__price">250 Kč</p>
+                            </div>
+                            <p class="item__ingredients">
+                                hranolky, barbecue sauce
+                            </p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">kuřecí biryani</h4>
+                                <p class="item__price">275 kč</p>
+                            </div>
+                            <p class="item__ingredients">basmati ryže, kari, zeleninový salát</p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">kuřecí tikka masalla</h4>
+                                <p class="item__price">275 Kč</p>
+                            </div>
+                            <p class="item__ingredients">basmati rýže, směs indického koření, kokosový krém, smetana</p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">kuřecí řízek</h4>
+                                <p class="item__price">350 Kč</p>
+                            </div>
+                            <p class="item__ingredients">hranolky, salát, omáčka</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category__box">
+                    <h3>Kachní</h3>
+                    <ul>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">pečená kachna</h4>
+                                <p class="item__price">290 Kč</p>
+                            </div>
+                            <p class="item__ingredients">
+                                pečené brambory, zeleninová obloha
+                            </p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">pečená kachna</h4>
+                                <p class="item__price">290 kč</p>
+                            </div>
+                            <p class="item__ingredients">vařené zelí, salát, knedlikyt</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category__box">
+                    <h3>Saláty</h3>
+                    <ul>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">salát caesar</h4>
+                                <p class="item__price">225 Kč</p>
+                            </div>
+                            <p class="item__ingredients">
+                                grilované kuře, salát, rajče, vařené vejce, parmesan, toust
+                            </p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">řecký salát</h4>
+                                <p class="item__price">175 kč</p>
+                            </div>
+                            <p class="item__ingredients">feta sýr, rajče , okurka , cibule , paprika , olivy
+                            </p>
+                        </li>
+                    </ul>
                 </div>
             </div>
-    </section>
-    <section class="menuShowcase">
-        <h2>Hlavní jídla</h2>
-        <div class="column column--first">
-            <ul>
-                <li class="menu__item">
-                    <div class="item__head">
-                        <h4 class="item__title">Burger</h4>
-                        <p class="item__price">159 Kč</p>
-                    </div>
-                    <p class="item__ingredients">
-                        z fazolí či v kombinaci s červenou řepou, zeleninový salát
-                    </p>
-                </li>
-                <li class="menu__item">
-                    <div class="item__head">
-                        <h4 class="item__title">jídlo</h4>
-                        <p class="item__price">cena</p>
-                    </div>
-                    <p class="item__ingredients">Popis</p>
-                </li>
-                <li class="menu__item">
-                    <div class="item__head">
-                        <h4 class="item__title">jídlo</h4>
-                        <p class="item__price">cena</p>
-                    </div>
-                    <p class="item__ingredients">Popis</p>
-                </li>
-                <li class="menu__item">
-                    <div class="item__head">
-                        <h4 class="item__title">jídlo</h4>
-                        <p class="item__price">cena</p>
-                    </div>
-                    <p class="item__ingredients">Popis</p>
-                </li>
-                <li class="menu__item">
-                    <div class="item__head">
-                        <h4 class="item__title">jídlo</h4>
-                        <p class="item__price">cena</p>
-                    </div>
-                    <p class="item__ingredients">Popis</p>
-                </li>
-                <li class="menu__item">
-                    <div class="item__head">
-                        <h4 class="item__title">jídlo</h4>
-                        <p class="item__price">cena</p>
-                    </div>
-                    <p class="item__ingredients">Popis</p>
-                </li>
-                <li class="menu__item">
-                    <div class="item__head">
-                        <h4 class="item__title">jídlo</h4>
-                        <p class="item__price">cena</p>
-                    </div>
-                    <p class="item__ingredients">Popis</p>
-                </li>
-                <li class="menu__item">
-                    <div class="item__head">
-                        <h4 class="item__title">jídlo</h4>
-                        <p class="item__price">cena</p>
-                    </div>
-                    <p class="item__ingredients">Popis</p>
-                </li>
-            </ul>
+            <div class="col">
+                <div class="category__box">
+                    <h3>Ryba</h3>
+                    <ul>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">biryani krevety</h4>
+                                <p class="item__price">350 Kč</p>
+                            </div>
+                            <p class="item__ingredients">
+                                rýže basmati, koření na kari, salát a rajčata
+                            </p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">grilovaný losos</h4>
+                                <p class="item__price">350 kč</p>
+                            </div>
+                            <p class="item__ingredients">hranolky, zeleninová obloha</p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">grilovaný losos</h4>
+                                <p class="item__price">350 kč</p>
+                            </div>
+                            <p class="item__ingredients">basmati rýže, sojová omáčka</p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">grilovaný losos</h4>
+                                <p class="item__price">350 kč</p>
+                            </div>
+                            <p class="item__ingredients">grilované brambory, míchaná zelenina, fazolky, mrkev a
+                                brokolice
+                            </p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">pečený pstruh s bylinkami a máslem</h4>
+                                <p class="item__price">299 kč</p>
+                            </div>
+                            <p class="item__ingredients">grilované brambory, míchaná zelenina, fazolky, mrkev a
+                                brokolice
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category__box">
+                    <h3>Těstoviny</h3>
+                    <ul>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">kuřecí maso s houbami - pasta</h4>
+                                <p class="item__price">250 Kč</p>
+                            </div>
+                            <p class="item__ingredients">
+                            </p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">čtyři druhy sýra</h4>
+                                <p class="item__price">250 kč</p>
+                            </div>
+                            <p class="item__ingredients">těstoviny, kozí sýr, hermelín, parmazán, ementál</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category__box">
+                    <h3>Vegetariánské</h3>
+                    <ul>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">humus s grilovanými brambory a zeleninou</h4>
+                                <p class="item__price">250 Kč</p>
+                            </div>
+                            <p class="item__ingredients">
+                                fazole, mrkev, brokolice, salát, rajče, hummus
+                            </p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">zeleninové biryani</h4>
+                                <p class="item__price">250 kč</p>
+                            </div>
+                            <p class="item__ingredients">míchaná zelenina, zelené fazolky, mrkev, brokolice, kari koření
+                            </p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">grilovaný camembert</h4>
+                                <p class="item__price">175 kč</p>
+                            </div>
+                            <p class="item__ingredients">pečivo, rukola salát, rajčata</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category__box">
+                    <h3>Dětské menu</h3>
+                    <ul>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">kuřecí filet a hranolky</h4>
+                                <p class="item__price">150 Kč</p>
+                            </div>
+                            <p class="item__ingredients">
+                            </p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">hranolky</h4>
+                                <p class="item__price">65 kč</p>
+                            </div>
+                            <p class="item__ingredients">míchaná zelenina, zelené fazolky, mrkev, brokolice, kari koření
+                            </p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">grilovaný camembert</h4>
+                                <p class="item__price">175 kč</p>
+                            </div>
+                            <p class="item__ingredients">pečivo, rukola salát, rajčata</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="column column--second">
-            <ul>
-                <li class="menu__item">
-                    <div class="item__head">
-                        <h4 class="item__title">Burger</h4>
-                        <p class="item__price">159 Kč</p>
-                    </div>
-                    <p class="item__ingredients">
-                        z fazolí či v kombinaci s červenou řepou, zeleninový salát
-                    </p>
-                </li>
-                <li class="menu__item">
-                    <div class="item__head">
-                        <h4 class="item__title">jídlo</h4>
-                        <p class="item__price">cena</p>
-                    </div>
-                    <p class="item__ingredients">Popis</p>
-                </li>
-                <li class="menu__item">
-                    <div class="item__head">
-                        <h4 class="item__title">jídlo</h4>
-                        <p class="item__price">cena</p>
-                    </div>
-                    <p class="item__ingredients">Popis</p>
-                </li>
-                <li class="menu__item">
-                    <div class="item__head">
-                        <h4 class="item__title">jídlo</h4>
-                        <p class="item__price">cena</p>
-                    </div>
-                    <p class="item__ingredients">Popis</p>
-                </li>
-                <li class="menu__item">
-                    <div class="item__head">
-                        <h4 class="item__title">jídlo</h4>
-                        <p class="item__price">cena</p>
-                    </div>
-                    <p class="item__ingredients">Popis</p>
-                </li>
-                <li class="menu__item">
-                    <div class="item__head">
-                        <h4 class="item__title">jídlo</h4>
-                        <p class="item__price">cena</p>
-                    </div>
-                    <p class="item__ingredients">Popis</p>
-                </li>
-                <li class="menu__item">
-                    <div class="item__head">
-                        <h4 class="item__title">jídlo</h4>
-                        <p class="item__price">cena</p>
-                    </div>
-                    <p class="item__ingredients">Popis</p>
-                </li>
-                <li class="menu__item">
-                    <div class="item__head">
-                        <h4 class="item__title">jídlo</h4>
-                        <p class="item__price">cena</p>
-                    </div>
-                    <p class="item__ingredients">Popis</p>
-                </li>
-            </ul>
+    </section>
+    <section id="deserts" class="menuShowcase menuShowcase--starters">
+        <div class="row">
+            <div class="col">
+                <h2>Předkrmy</h2>
+                <div class="category__box">
+                    <ul>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">houbová polévka</h4>
+                                <p class="item__price">80 Kč</p>
+                            </div>
+                            <p class="item__ingredients">
+                                brambory, cibule, mrkev, houby, smetana
+                            </p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">jemná kuřecí polévka</h4>
+                                <p class="item__price">80 kč</p>
+                            </div>
+                            <p class="item__ingredients">kuřecí maso,camembert, brambory</p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">smažené plněné taštičky kozím sýrem </h4>
+                                <p class="item__price">160 Kč</p>
+                            </div>
+                            <p class="item__ingredients">kozí sýr, med, rukola salát</p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">rajčatová mozarella s domácím bazalkovým pestem</h4>
+                                <p class="item__price">130 kč</p>
+                            </div>
+                            <p class="item__ingredients">pesto omačka, bazalka, rukolovy salat </p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">tatarák z lososa </h4>
+                                <p class="item__price">195 Kč</p>
+                            </div>
+                            <p class="item__ingredients">s citron, rokula a olivový olej, pazitkou a rozpečenou
+                                ciabattou
+                            </p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">zeleninová samosa</h4>
+                                <p class="item__price">125 Kč</p>
+                            </div>
+                            <p class="item__ingredients">se sladkou chilli omačkou</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <h2>Deserty</h2>
+                <h3>Dle nabídky přímo v restauraci. Příklady:</h3>
+                <div class="category__box">
+                    <ul>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">cheescake s jahodovou polevou</h4>
+                                <p class="item__price">90 Kč</p>
+                            </div>
+                            <p class="item__ingredients"></p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">mandlový koláč</h4>
+                                <p class="item__price">90 Kč</p>
+                            </div>
+                            <p class="item__ingredients"></p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">creme brulee</h4>
+                                <p class="item__price">90 kč</p>
+                            </div>
+                            <p class="item__ingredients"></p>
+                        </li>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">tiramisu, mango, strawberry </h4>
+                                <p class="item__price">90 Kč</p>
+                            </div>
+                            <p class="item__ingredients"></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
+    <section id="drinks" class="menuShowcase menuShowcase--drinks">
+        <h2>Nápoje - připravuje se</h2>
+        <div class="row">
+            <div class="col">
+                <div class="category__box">
+                    <h3>Nealko</h3>
+                    <ul>
+                        <li class="menu__item">
+                            <div class="item__head">
+                                <h4 class="item__title">Coca-cola</h4>
+                                <p class="item__price">50 Kč</p>
+                            </div>
+                            <p class="item__ingredients">
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="inner">
+            <img class="footer__logo" src="./app/images/brand/logo.png" alt="">
+            <div class="row" id="contact">
+                <div class="col">
+                    <h3>Kde nás najdete?</h3>
+                    <ul>
+                        <li>Zeyerova 934/3, 360 01 Karlovy Vary</li>
+                        <li>info@uzlatekachny.com</li>
+                        <li>+420 608 243 750</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Otevírací doba</h3>
+                    <ul>
+                        <li>Po - Pá: 11 - 22 hod</li>
+                        <li>So, Ne: 12 - 22 hod</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-
+<script>
+	var scroll = new SmoothScroll('a[href*="#"]');
+</script>
 </html>

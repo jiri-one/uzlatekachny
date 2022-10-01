@@ -1,5 +1,7 @@
 @import "../master";
-
+.header {
+    height: 280px;
+}
 .site__logo  {
     width: 100%;
     padding: 1rem;
@@ -45,6 +47,13 @@
                 cursor: pointer;
                 &:hover{
                     color: $yellow;
+                }
+                a {
+                    text-decoration: none;
+                    color: $white;
+                    &:hover {
+                        color: $yellow
+                    }
                 }
             }
         }
